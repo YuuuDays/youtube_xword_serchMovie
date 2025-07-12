@@ -12,6 +12,7 @@ const App: React.FC = () => {
       try {
         setError(null);
         const vids = await fetchYouTubeVideos();
+        console.log("vids", vids);
         setVideos(vids);
       } catch (err) {
         console.error("動画読み込みエラー:", err);
@@ -58,6 +59,7 @@ REACT_APP_SEARCH_QUERY=検索したいキーワード`}
         <ul>
           {videos.map((video) => (
             <li key={video.id.videoId} style={{ marginBottom: "1rem" }}>
+              <img src={video.snippet.thumbnails.high.url}></img><br></br>
               <a
                 href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
                 target="_blank"

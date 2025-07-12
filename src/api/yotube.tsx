@@ -2,7 +2,7 @@ const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY!;
 const SEARCH_QUERY = process.env.REACT_APP_SEARCH_QUERY!;
 const BASE_URL = "https://www.googleapis.com/youtube/v3/search";
 
-const searchNumber = 70;
+const searchNumber = 100;
 
 export type VideoItem = {
   id: { videoId: string };
@@ -10,6 +10,11 @@ export type VideoItem = {
     title: string;
     description: string;
     publishedAt: string;
+    thumbnails:{
+      high:{
+        url:string;
+      }
+    }
   };
 };
 
