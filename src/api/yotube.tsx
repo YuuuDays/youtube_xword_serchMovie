@@ -33,7 +33,15 @@ export const fetchYouTubeVideos = async (): Promise<VideoItem[]> => {
   console.log("検索クエリ:", SEARCH_QUERY);
   console.log("API キー:", API_KEY ? "設定済み" : "未設定");
 
-  const url = `${BASE_URL}?part=snippet&type=video&order=date&q=${encodeURIComponent(
+  /*
+  主なorderパラメータ
+  date … 新着順（今の設定）
+  viewCount … 再生回数順（再生数が多い順）
+  rating … 評価順
+  relevance … 関連性順（デフォルト）
+   */
+  const order = "viewCount";
+  const url = `${BASE_URL}?part=snippet&type=video&order=${order}&q=${encodeURIComponent(
     SEARCH_QUERY
   )}&maxResults=${searchNumber}&key=${API_KEY}`;
 

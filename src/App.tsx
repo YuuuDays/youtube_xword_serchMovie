@@ -39,8 +39,8 @@ const App: React.FC = () => {
             <li>プロジェクトのルートディレクトリに <code>.env</code> ファイルを作成</li>
             <li>以下の内容を追加:</li>
             <pre style={{ background: '#f5f5f5', padding: 10, borderRadius: 5 }}>
-{`REACT_APP_YOUTUBE_API_KEY=あなたのYouTube_APIキー
-REACT_APP_SEARCH_QUERY=検索したいキーワード`}
+              {`REACT_APP_YOUTUBE_API_KEY=あなたのYouTube_APIキー
+              REACT_APP_SEARCH_QUERY=検索したいキーワード`}
             </pre>
             <li>アプリを再起動</li>
           </ol>
