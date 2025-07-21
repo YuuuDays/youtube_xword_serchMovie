@@ -45,8 +45,6 @@ const App: React.FC = () => {
             <li>アプリを再起動</li>
           </ol>
         </div>
-
-        
       </div>
     );
   }
